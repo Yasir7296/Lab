@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.2">
+    <title>Register Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('download for sigeup.avif'); /* Replace with a direct link to your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: flex-start; /* Align content to the top of the container */
+            justify-content: center;
+        }
+
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            width: 500px; /* Adjust the width as needed */
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px; /* Larger font size for "Register Now" */
+            color: #FF6347; /* Attractive color for "Register Now" */
+            margin-bottom: 20px; /* Add some space below the heading */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #FF6347; /* Attractive color for the button */
+            color: white;
+            border: none;
+            padding: 12px 20px; /* Larger padding for the button */
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto; /* Center the button */
+            font-size: 16px; /* Font size for the button text */
+        }
+
+        button:hover {
+            background-color: #FF4500; /* Darker shade on hover */
+        }
+
+        a {
+            text-decoration: none;
+            color: #1E90FF;
+        }
+
+        .confirm-password {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Register Now</h2>
+        <form action="signup_process.html" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword" class="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="text" id="dob" name="dob" placeholder="YYYY-MM-DD" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0333 1234567" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" style="text-transform: capitalize;" required>
+
+            <button onclick="redirectToLogin() ">Register Now</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login here</a></p>
+    </div>
+    <script>
+        function redirectToLogin() {
+            // Redirect to the login page
+            window.location.href = "signup-process.html";
+        }
+    </script>
+</body>
+</html>
